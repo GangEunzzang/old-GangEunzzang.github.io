@@ -2,8 +2,8 @@
 # Must be the same as `author` in `_config.yml`.
 # Change `author1` to your shortname.
 author1:
-  name:              <GangEun> <Lee>
-  email:             <rkddms123456@gmail.com>
+  name: GangEun Lee
+  email: rkddms123456@gmail.com
 
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
@@ -27,8 +27,8 @@ author1:
   # Rearrange to change the order in which they appear
   social:
 #    twitter:         <username>
-    github:          <GangEunzzang>
-    email:           <rkddms123456@gmail.com>
+    github:          GangEunzzang
+    email:           rkddms123456@gmail.com
     # rss:             https://<url>/feed.xml
     # facebook:        <username>
     # google:          <number>
@@ -68,8 +68,8 @@ author1:
 
 # Another author (optional)
 author2:
-  name:              <GangEun> <Lee>
-  email:             <rkddms123456@gmail.com>
+  name:              GangEun Lee
+  email:             rkddms123456@gmail.com
   about:             |
     Lorem ipsum dolor sit amet, consectetur adipiscing elit,
     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -79,4 +79,4 @@ author2:
 
   picture:           https://placehold.it/128x128
 #  twitter:           <username>
-  github:            <GangEunzzang>
+  github:            GangEunzzang
