@@ -216,12 +216,12 @@ cover:  true #!! Add this
 You can choose which posts will appear in the "Related Posts" section below a post by adding the `related_posts` key to the front matter of a post
 
 ~~~yml
-# file: `category/_posts/2020-02-01-some-post.md`
+# file: `category/_posts/2020-02-01-some-post.html`
 ---
 layout: post
 related_posts:
   # Specify via the path in the file system
-  - category/_posts/2020-01-01-other-post.md
+  - category/_posts/2020-01-01-other-post.html
   # Can also use the url of the post,
   # but this will break when changing the `permalink` setting!
   - /blog/category/2020-01-02-other-other-post/
