@@ -3,42 +3,69 @@
 
 # Uncomment and set the URL of your site (with protocol, e.g. `https://`)
 # NOTE: You don't need to provide this property when hosting on GitHub Pages or Netlify.
-# url:                   https://username.github.io
+url:                   https://gangeunzzang.github.io
 
 # Uncomment and set the "base URL" of your site.
 # When your site is in a subdirectory, set to `/<name of directory>`,
 # with a leading `/` but no trailing `/`. Use the empty string '' otherwise.
 # NOTE: You don't need to provide this property when hosting on GitHub Pages or Netlify.
-# baseurl:               '/hydejack-starter-kit'
+baseurl:               ''
 
 
 # General settings
 # ---------------------------------------------------------------------------------------
 
-lang: en
-title: 게임과개발사이
+# Language of your content in 2-letter code, e.g.: en, de.
+# You may also provide a location, e.g.: en-us, de_AT.
+lang: ko-KR, en-US
+
+encoding:              UTF-8
+
+# The title of your blog. Used in the sidebar and the browser tab.
+title:                 게임과개발사이
+
+# A short description (~150 chars) of the page used for the meta description tag.
+# Can use markdown, but no more than one paragraph (enforced by `>`)
 description:           >
   Hydejack is a boutique Jekyll theme for hackers, nerds, and academics,
   with a focus on personal sites that are meant to impress.
 
-tagline: 원하는 인생은 늘 안전지대 밖에 있다
-keywords:              []
-logo:                  /assets/img/logo.png
-author:
-  name:  GangEun Lee
-  email: rkddms123456@gmail.com
-menu:
-  - title:             Java
-    url:               /java/
-  - title:             Spring
-    url:               /spring/
-  - title:             Example
-    url:               /example/
-  - title:             Documentation
-    url:               /docs/
-  - title:             About
-    url:               /about/
+# A shorter description for the sidebar.
+tagline:    원하는 인생은 늘 안전지대 밖에 있다.
 
+# A list of keywords for your blog
+keywords:              []
+
+# A (square) logo for your site.
+# If provided, it will be shown at the top of the sidebar.
+# It also used by the `jekyll-seo-tag` plugin.
+logo:                  /assets/img/zzangu.jpeg
+
+# This should be the same author as first entry in `_data/authors.yml`.
+author:
+  # Used by `jekyll-feed`:
+  name:              이강은
+  email:             rkddms123456@gmail.com
+  # # Used by `jekyll-seo-tag`:
+  # twitter:             <username>
+
+# Add links to the sidebar.
+# menu:
+#  - title: About
+#    url:   /about/   
+#  - title: Resume
+#    url:   /resume/
+#  - title: GIT
+#    url:   /git/
+#  - title: Jekyll
+#    url:   /jekyll/   
+#  - title: React
+#    url:   /react/ 
+#  - title: Database
+#    url:   /database/ 
+
+# Add links to the footer.
+# Typically you'll want to link to your cookie- or privacy policy (if appliable), etc..
 legal:
   - title:             LICENSE
     url:               /LICENSE/
@@ -47,23 +74,35 @@ legal:
   - title:             CHANGELOG
     url:               /CHANGELOG/
 
+# This text will appear in a `<small>` tag in the footer of every page.
 copyright:             © 2021. All rights reserved.
-permalink:             /:categories/:year-:month-:day-:title/
-paginate:              10
-paginate_path:         /:num/
 
-# theme: jekyll-theme-hydejack
-remote_theme: hydecorp/hydejack@v9
+# Format of the permalinks
+permalink:             /:categories/:year-:month-:day-:title/
+
+# Pagination configuration (used by the `blog` layout)
+paginate:              10
+paginate_path: /page-:num/
+
+
+# Theme
+# ---------------------------------------------------------------------------------------
+
+theme: jekyll-theme-hydejack
+remote_theme: hydecorp/hydejack@v9.0.0-rc.6
 
 
 # Customizaton
-accent_image:          /assets/img/sidebar-bg.jpg
+# ----------------------------------------------------------------------------------------
+ 
+# Sidebar image and theme color of the site.
+accent_image:          /assets/img/zzanguBackGround.jpeg
 accent_color:          rgb(79,177,186)
 
 # This is used for the `theme-color` meta tag,
 # which changes the background color of the browser UI in certain browsers.
 # Defaults to `accent_color`.
-theme_color:           rgb(25,55,71)
+theme_color:           rgb(8,46,57)
 
 # The string encoding which fonts to fetch from Google Fonts.
 # See: <https://hydejack.com/docs/configuration/>
@@ -80,6 +119,8 @@ font_heading:          Roboto Slab, Helvetica, Arial, sans-serif
 # The font used for code blocks. Expects a string that is a valid CSS font-family value.
 font_code:             Fira Code, Menlo, Monaco, Consolas, monospace;
 
+clap_button: false
+
 defaults:
   # You can use this to provide a default accent color and background for
   # all pages under a given path:
@@ -87,28 +128,30 @@ defaults:
       path:            hyde/
     values:
       accent_color:    rgb(38,139,210)
-      theme_color:     rgb(32,32,32)
+      theme_color:     rgb(38,139,210)
       accent_image:
         background:    rgb(32,32,32)
         overlay:       false
 
-  # Don't include documents in assets in the sitemap
+  # Don't include site verification file(for google) in the sitemap
   - scope:
-      path:            assets/
+      path: google93abcae935f31b7d.html
     values:
-      sitemap:         false
+      sitemap: false
 
+  # Don't include site verification file(for naver) in the sitemap
   - scope:
-      path:            licenses/
+      path: naver38ec7105e3396e6eb497b549362e0f42.html
     values:
-      layout:          plain
-      sitemap:         false
+      sitemap: false
 
   # # You can use the following to enable comments on all posts.
-  # - scope:
-  #     type:            posts
-  #   values:
-  #     comments:        true
+  - scope:
+      type: posts
+    values:
+      comments: true
+      # https://applause-button.com/
+      applause_button: true
 
   # `jekyll-seo-tag` will mark collection outputs as `BlogPosting`,
   # but we want them to be `WebPage`s:
@@ -120,11 +163,13 @@ defaults:
   - scope:
       type:            featured_categories
     values:
+      menu:            true
       seo:
         type:          WebPage
   - scope:
       type:            featured_tags
     values:
+      menu:            false
       seo:
         type:          WebPage
 
@@ -141,14 +186,31 @@ kramdown:
 # To remove Google Anaylics from your page, remove the line below.
 # google_analytics:      UA-XXXXXXXX-X
 
+# Set which comment system to use
+comments:
+  # 'disqus' / 'giscus' / 'utterances' are available
+  provider:            giscus
+
 # Setting a disqus shortname will enable the comment section on
 # pages with `comments: true` in the front matter.
 # disqus:                <username>
 
+# You must install giscus github app before use.(https://github.com/apps/giscus)
+# Make sure all variables are set properly. Check below link for detail.
+# https://giscus.vercel.app/
+giscus:
+  repo:                "gangeunzzang.github.io"
+  repo-id:             "R_kgDOGGPhNA"
+  category:            "Comments"
+  category-id: "DIC_kwDOGGPhNM4CAC4O"
+  mapping: "pathname"
+  reaction-enabled:    "1"
+  theme:               "light"
+  crossorigin:         "anonymous"
+
 # Setting a tinyletter username will enable the newsletter subscription box.
 # PRO version only!
 # tinyletter:            <username>
-
 
 # Hydejack Settings
 # ----------------------------------------------------------------------------------------
@@ -286,8 +348,7 @@ include:
   - .well-known
   - LICENSE.md
 
-gems:
-  - jekyll-gist
+
 # Plugins
 # ----------------------------------------------------------------------------------------
 
@@ -353,7 +414,7 @@ titles_from_headings:
   collections:         true
 
 compress_html:
-  comments:            ["<!--", "-->"]
+  comments:            ["<!-- ", " -->"]
   clippings:           all
   endings:             all
   ignore:

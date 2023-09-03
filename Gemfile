@@ -29,9 +29,6 @@ gem "kramdown-math-katex"
 # A JavaScript runtime for ruby that helps with running the katex gem above.
 gem "duktape"
 
-# Fixes `jekyll serve` in ruby 3
-gem "webrick"
-
 group :jekyll_plugins do
   gem "jekyll-default-layout"
   gem "jekyll-feed"
@@ -53,3 +50,4 @@ end
 gem 'wdm' if Gem.win_platform?
 gem "tzinfo-data" if Gem.win_platform?
 
+gem "webrick", "~> 1.7"
