@@ -286,8 +286,8 @@ include:
   - .well-known
   - LICENSE.md
 
-gems:
-  - jekyll-gist
+#gems:
+#  - jekyll-gist
 # Plugins
 # ----------------------------------------------------------------------------------------
 
@@ -306,6 +306,7 @@ plugins:
   - jekyll-last-modified-at
   - jekyll-some-plugin
   - jekyll-another-plugin
+  - jekyll-gist
 
 
 # SEO Tag
