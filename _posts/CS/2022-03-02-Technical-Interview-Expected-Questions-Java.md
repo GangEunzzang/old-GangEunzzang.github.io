@@ -1,8 +1,8 @@
 ---
-title: '[CS] 기술면접 정리 - JAVA'
+title: '[기술 면접] Java 정리'
 layout: post
-categories: cs
-tags: cs
+categories: 기술면접
+tags: 기술면접
 comments: true
 ---
 
@@ -199,7 +199,7 @@ Object를 기준으로 코드를 나누어 구현하는 프로그래밍(Java는 
 </details>
 
 <details>
-<summary> <b> 클래스는 무엇기고 객체는 무엇인가?  </b> </summary>
+<summary> <b> 클래스는 무엇이고 객체는 무엇인가?  </b> </summary>
 <div markdown="1">
 
 - 클래스: 객체를 정의하는 틀 또는 설계도와 같은 의미
@@ -224,6 +224,52 @@ Object를 기준으로 코드를 나누어 구현하는 프로그래밍(Java는 
 
 </div>
 </details>
+
+<details>
+<summary> <b> String, StringBuilder, StringBuffer 차이 설명    </b> </summary>
+<div markdown="1">
+
+- String은 불변 객체이며, 스레드 안전을 보장하고, 문자열 수정 작업이 자주 발생시 성능 저하 발생   
+- StringBuilder, StringBuffer는 가변 타입이다. 문자열을 수정하는 작업에 효율적이다.
+- StringBuilder는 Thread-safe 하지 않다.
+- StringBuffer는 내부적으로 synchronized 키워드를 사용하여 Thread-safe 하다.
+
+</div>
+</details>
+
+<details>
+<summary> <b> Error와 Exception 차이  </b> </summary>
+<div markdown="1">
+
+- **Error:** 
+  - 시스템 수준에서 발생하는 예외 상황
+  - 개발자가 예측하기 어렵고, 처리방법을 코드에 명시 불가능
+  - 시스템이 종료됨
+
+- **Exception:**
+  - 개발자가 예상할 수 있는 예외 상황
+  - 처리 방법을 코드에 명시 가능
+
+</div>
+</details>
+
+<details>
+<summary> <b> Checked Exception과 Unchecked Exception 차이 </b> </summary>
+<div markdown="1">
+
+- **Checked Exception**
+  - 컴파일시점에 확인가능한 예외로 예측이 가능하다
+  - 반드시 예외처리를 해야한다
+  - 트랜잭션 롤백이 일어나지 않는다.
+
+- **Unchecked Exception**
+  - 런타임시점에 확인가능한 예외로 예측할 수 없다.
+  - 트랜잭션이 롤백된다.
+
+</div>
+</details>
+
+
 
 ## 참고
 - [백엔드 개발자로 입사를 준비하며 받았던 질문, 예상했던 질문, 인터넷 참고한 질문(CC BY-NC)](https://github.dev/ksundong/backend-interview-question)

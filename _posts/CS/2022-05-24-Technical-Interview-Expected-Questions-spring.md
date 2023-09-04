@@ -1,8 +1,8 @@
 ---
-title: '[CS] 기술면접 예상 질문 - Spring'
+title: '[기술 면접] Spring 정리'
 layout: post
-categories: cs
-tags: cs
+categories: 기술면접
+tags: 기술면접
 comments: true
 ---
 

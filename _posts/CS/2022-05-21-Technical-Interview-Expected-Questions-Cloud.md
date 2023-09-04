@@ -1,8 +1,8 @@
 ---
-title: '[CS] 기술면접 예상 질문 - 클라우드'
+title: '[기술 면접] Devops 정리'
 layout: post
-categories: cs
-tags: cs
+categories: 기술면접
+tags: 기술면접
 comments: true
 ---
 

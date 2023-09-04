@@ -1,8 +1,8 @@
 ---
-title: '[CS] CS 면접 준비 관련 사이트 모음'
+title: '[기술 면접] CS 면접 준비 관련 사이트 모음'
 layout: post
-categories: cs
-tags: cs
+categories: 기술면접
+tags: 기술면접
 comments: true
 ---
 
