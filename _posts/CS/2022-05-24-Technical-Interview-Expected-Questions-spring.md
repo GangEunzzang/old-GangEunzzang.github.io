@@ -100,7 +100,14 @@ ioC 컨테이너를 통해 객체 간의 의존성을 주입하면서 느슨한 
 </div>
 </details>
 
+<details>
+<summary> <b> JPA N+1 문제 원인과 해결 방법  </b> </summary>
+<div markdown="1">
 
+
+
+</div>
+</details>
 
 
 ## 참고
