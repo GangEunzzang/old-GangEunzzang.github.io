@@ -1,5 +1,5 @@
 ---
-title: '[모던 자바 인 액션] chapter4 스트림은 무엇인가'
+title: '[모던 자바 인 액션] chapter4 스트림 소개'
 layout: post
 categories: java
 tags: java
@@ -86,7 +86,37 @@ List<String> lowCaloricDishesName = menu.stream()
 * 스트림은 반복자와 마찬가지로 한 번만 탐색할 수 있다. 탐색된 스트림의 요소는 소비된다.
 
 ### 외부 반복과 내부 반복
+컬렉션 인터페이스는 사용자가 직접 요소를 반복해야 한다. (외부 반복, external iteration)  
+스트림 라이브러리는 반복을 알아서 처리하고 결과 스트림값을 어딘가 저장해준다. (내부 반복, internal iteration)
 
+#### 외부 반복 예제
+```java
+List<String> names = new ArrayList<>();
+for (Dish dish : menu) {
+    names.add(dish.getName());
+}
+
+List<String> names = new ArrayList<>();
+Iterator<String> iterator = menu.iterator();
+while (iterator.hasNext()) {    // 명시적 반복
+    Dish dish = iterator.next();
+    names.add(dish.getName());
+}
+
+```
+
+#### 내부 반복 예제
+```java
+List<String> names = menu.stream()
+        .map(Dish::getName) // 요리명 추출
+        .collect(Collectors.toList());  // 파이프라인 실행(반복자 필요 없음)
+```
+
+내부 반복을 이용하면 장점은 다음과 같다.  
+  1. 작업을투명하게 병렬로 처리할 수 있다.
+  2. 더 최적화된 다양한 순서로 처리할 수 있다.
+
+외부 반복에서는 병렬성을 스스로 관리해야 한다.
 
 * * * 
 ## 스트림 연산
