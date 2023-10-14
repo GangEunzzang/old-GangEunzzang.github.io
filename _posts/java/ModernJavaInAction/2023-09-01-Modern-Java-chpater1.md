@@ -1,5 +1,5 @@
 ---
-title: '[모던 자바 인 액션] chapter1 자바 8,9,10,11 무슨 일이 일어나고 있는가? '
+title: '[모던 자바 인 액션] chapter1 자바 8,9,10,11 무슨 일이 일어나고 있는가?'
 layout: post
 categories: java
 tags: java
@@ -422,6 +422,6 @@ default void sort(Comparator<? super E> C) {
 
 * * *
 
-## 마무리
+## 마치며
 자바8은 자바 역사적으로 엄청난 전환점을 맞은 시기이니 확실하게 공부하자 ~_~ 
 
