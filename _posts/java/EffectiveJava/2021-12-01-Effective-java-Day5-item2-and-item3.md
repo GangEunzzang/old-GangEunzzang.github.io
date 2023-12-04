@@ -1,12 +1,10 @@
 ---
-title: '[Effective Java] Day 5 - Item 2 :: 생성자에 매개변수가 많다면 빌더를 고려하라 (2), Item 3 :: Private 생성자나 열거 타입으로 싱글턴임을 보증하라'
+title: 'Item 3 :: Private 생성자나 열거 타입으로 싱글턴임을 보증하라'
 layout: post
 categories: java
-tags: java
+tags: Effective-Java
 comments: true
 ---
-
-Day 5 기록 시작!
 
 ## Item 2 :: 생성자에 매개변수가 많다면 빌더를 고려하라 (2)
 ### 3. 빌더 패턴(JavaBeans pattern) (2)

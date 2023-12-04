@@ -1,8 +1,8 @@
 ---
-title: '[Effective Java] Day 18 - Item 18 :: 상속보다는 컴포지션을 사용하라'
+title: 'Item 18 :: 상속보다는 컴포지션을 사용하라'
 layout: post
 categories: java
-tags: java 이펙티브자바 effectiveJava
+tags: Effective-Java
 comments: true
 ---
 

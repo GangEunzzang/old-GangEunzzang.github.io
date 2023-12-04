@@ -1,8 +1,8 @@
 ---
-title: '[모던 자바 인 액션] chapter3 람다 표현식'
+title: 'chapter3 :: 람다 표현식'
 layout: post
 categories: java
-tags: java
+tags: Modern-Java-In-Action
 comments: true
 ---
 

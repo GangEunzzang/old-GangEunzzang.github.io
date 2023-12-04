@@ -1,8 +1,8 @@
 ---
-title: '[Effective Java] Day 32 - Item 86 :: Serialize를 구현할지는 신중히 결정하라'
+title: 'Item 86 :: Serialize를 구현할지는 신중히 결정하라'
 layout: post
 categories: java
-tags: java
+tags: Effective-Java
 comments: true
 ---
 

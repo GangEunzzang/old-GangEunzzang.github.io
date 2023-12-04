@@ -1,13 +1,10 @@
 ---
-title: '[Effective Java] Day 7 - Item 3 :: Private 생성자나 열거 타입으로 싱글턴임을 보증하라(2)'
+title: 'Item 3 :: Private 생성자나 열거 타입으로 싱글턴임을 보증하라(2)'
 layout: post
 categories: java
-tags: java
+tags: Effective-Java
 comments: true
 ---
-
-Day 6에서는 플라이웨이트 패턴(Flyweight pattern), Java의 String Pool, 예제 소스를 참조한 장점3,4,5 이해를 통해 내용을 보완하며 item1,2를 복습하였다 (게시글 수정으로 진행함).
-Day 7 기록 시작!
 
 ## Item 3 :: Private 생성자나 열거 타입으로 싱글턴임을 보증하라 (2)
 ### 1. public static final 필드 방식의 싱글턴

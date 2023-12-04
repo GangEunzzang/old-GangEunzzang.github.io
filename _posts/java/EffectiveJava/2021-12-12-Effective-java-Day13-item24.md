@@ -1,8 +1,8 @@
 ---
-title: '[Effective Java] Day 13 - Item 24 :: 멤버 클래스는 되도록 static으로 만들라'
+title: 'Item 24 :: 멤버 클래스는 되도록 static으로 만들라'
 layout: post
 categories: java
-tags: java 이펙티브자바 effectiveJava
+tags: Effective-Java
 comments: true
 ---
 

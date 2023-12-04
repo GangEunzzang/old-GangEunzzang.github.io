@@ -4,44 +4,15 @@
 # Uncomment and set the URL of your site (with protocol, e.g. `https://`)
 # NOTE: You don't need to provide this property when hosting on GitHub Pages or Netlify.
 url:                   https://gangeunzzang.github.io
-
-# Uncomment and set the "base URL" of your site.
-# When your site is in a subdirectory, set to `/<name of directory>`,
-# with a leading `/` but no trailing `/`. Use the empty string '' otherwise.
-# NOTE: You don't need to provide this property when hosting on GitHub Pages or Netlify.
 baseurl:               ''
-
-
-# General settings
-# ---------------------------------------------------------------------------------------
-
-# Language of your content in 2-letter code, e.g.: en, de.
-# You may also provide a location, e.g.: en-us, de_AT.
 lang: ko-KR, en-US
-
 encoding:              UTF-8
-
-# The title of your blog. Used in the sidebar and the browser tab.
 title:                 게임과개발사이
-
-# A short description (~150 chars) of the page used for the meta description tag.
-# Can use markdown, but no more than one paragraph (enforced by `>`)
 description:           >
-  Hydejack is a boutique Jekyll theme for hackers, nerds, and academics,
-  with a focus on personal sites that are meant to impress.
-
-# A shorter description for the sidebar.
+  공부 정리 블로그
 tagline:    원하는 인생은 늘 안전지대 밖에 있다.
-
-# A list of keywords for your blog
 keywords:              []
-
-# A (square) logo for your site.
-# If provided, it will be shown at the top of the sidebar.
-# It also used by the `jekyll-seo-tag` plugin.
 logo:                  /assets/img/zzangu.jpeg
-
-# This should be the same author as first entry in `_data/authors.yml`.
 author:
   # Used by `jekyll-feed`:
   name:              이강은
@@ -88,7 +59,7 @@ paginate_path: /page-:num/
 # Theme
 # ---------------------------------------------------------------------------------------
 
-#theme: jekyll-theme-hydejack
+theme: jekyll-theme-hydejack
 remote_theme: hydecorp/hydejack@v9.0.0-rc.6
 
 

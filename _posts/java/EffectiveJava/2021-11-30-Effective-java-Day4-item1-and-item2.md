@@ -1,12 +1,10 @@
 ---
-title: '[Effective Java] Day 4 - Item 1 :: 생성자 대신 정적 팩터리 메서드를 고려하라(2), Item 2 :: 생성자에 매개변수가 많다면 빌더를 고려하라'
+title: ' Item 2 :: 생성자에 매개변수가 많다면 빌더를 고려하라'
 layout: post
 categories: java
-tags: java
+tags: Effective-Java
 comments: true
 ---
-
-Day 4 기록 시작!
 
 ## Item 1 :: 생성자 대신 정적 팩터리 메서드를 고려하라(2)
 ### 정적 팩터리 메서드의 장점

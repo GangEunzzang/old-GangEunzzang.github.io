@@ -1,8 +1,8 @@
 ---
-title: '[모던 자바 인 액션] chapter4 스트림 소개'
+title: 'chapter4 :: 스트림 소개'
 layout: post
 categories: java
-tags: java
+tags: Modern-Java-In-Action
 comments: true
 ---
 

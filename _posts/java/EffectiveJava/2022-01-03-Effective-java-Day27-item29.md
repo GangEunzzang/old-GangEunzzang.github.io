@@ -1,12 +1,10 @@
 ---
-title: '[Effective Java] Day 27 - Item 29 :: 이왕이면 제너릭 타입으로 만들라'
+title: 'Item 29 :: 이왕이면 제너릭 타입으로 만들라'
 layout: post
 categories: java
-tags: java 이펙티브자바 effectiveJava
+tags: Effective-Java
 comments: true
 ---
-
-Day27에서는 item 29에 대한 내용을 다룬다.
 
 ## Item 29 :: 이왕이면 제너릭 타입으로 만들라
 기존에 구현되어 있는 Object 기반의 스택 클래스를 보자

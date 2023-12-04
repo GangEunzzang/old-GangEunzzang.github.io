@@ -1,8 +1,8 @@
 ---
-title: '[Effective Java] Day 14 - Item 9, 10 :: try-finally 보다는 try-with-resources를 사용하라, equals는 일반 규약을 지켜 재정의하라'
+title: 'Item 9, 10 :: try-finally 보다는 try-with-resources를 사용하라, equals는 일반 규약을 지켜 재정의하라'
 layout: post
 categories: java
-tags: java 이펙티브자바 effectiveJava
+tags: Effective-Java
 comments: true
 ---
 

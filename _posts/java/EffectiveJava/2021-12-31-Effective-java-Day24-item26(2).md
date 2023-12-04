@@ -1,12 +1,10 @@
 ---
-title: '[Effective Java] Day 24 - Item 26 :: 로 타입은 사용하지 말라(2)'
+title: 'Item 26 :: 로 타입은 사용하지 말라(2)'
 layout: post
 categories: java
-tags: java 이펙티브자바 effectiveJava
+tags: Effective-Java
 comments: true
 ---
-
-Day24에서는 item 26에 대한 내용을 다룬다.
 
 ## Item 26 :: 로 타입은 사용하지 말라(2)
 ### 2. 비한정적 와일드카드 타입(unbounded wildcard type)

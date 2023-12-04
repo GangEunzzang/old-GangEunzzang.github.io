@@ -1,8 +1,8 @@
 ---
-title: '[Effective Java] Day 16 - Item 15, 16, 17 :: 클래스와 멤버의 접근 권한을 최소화하라(2), Public 클래스에서는 Public 필드가 아닌 접근자 메서드를사용하라, 변경가능성을 최소화 하라'
+title: 'Item 15, 16, 17 :: 클래스와 멤버의 접근 권한을 최소화하라(2), Public 클래스에서는 Public 필드가 아닌 접근자 메서드를사용하라, 변경가능성을 최소화 하라'
 layout: post
 categories: java
-tags: java 이펙티브자바 effectiveJava
+tags: Effective-Java
 comments: true
 ---
 

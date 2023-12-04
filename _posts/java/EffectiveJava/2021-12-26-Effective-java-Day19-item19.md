@@ -1,12 +1,11 @@
 ---
-title: '[Effective Java] Day 19 - Item 19 :: 상속을 고려한 설계 주의 사항과 문서화 (1)'
+title: 'Item 19 :: 상속을 고려한 설계 주의 사항과 문서화 (1)'
 layout: post
 categories: java
-tags: java 이펙티브자바 effectiveJava
+tags: Effective-Java
 comments: true
 ---
 
-Day19에서는 item 19에 대한 내용을 다룬다.
 
 ## Item 19 :: 상속을 고려한 설계 주의 사항과 문서화
 언제 상속을 사용해야 하는가에 관하여....

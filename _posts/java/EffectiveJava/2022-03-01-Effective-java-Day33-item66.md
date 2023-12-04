@@ -1,8 +1,8 @@
 ---
-title: '[Effective Java] Day 33 - Item 66 :: 네이티브 메서드는 신중히 사용하라'
+title: 'Item 66 :: 네이티브 메서드는 신중히 사용하라'
 layout: post
 categories: java
-tags: java
+tags: Effective-Java
 comments: true
 ---
 

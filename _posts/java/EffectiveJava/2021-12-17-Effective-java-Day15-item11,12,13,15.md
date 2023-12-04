@@ -1,8 +1,8 @@
 ---
-title: '[Effective Java] Day 15 - Item 11, 12, 13, 15 :: equals를 재정의하려거든 hashcode도 재정의하라, toString을 항상 재정의하라, clone 재정의는 주의해서 진행하라, 클래스와 멤버의 접근 권한을 최소화하라(1)'
+title: 'Item 11, 12, 13, 15 :: equals를 재정의하려거든 hashcode도 재정의하라, toString을 항상 재정의하라, clone 재정의는 주의해서 진행하라, 클래스와 멤버의 접근 권한을 최소화하라(1)'
 layout: post
 categories: java
-tags: java 이펙티브자바 effectiveJava hashCode hashTable
+tags: Effective-Java
 comments: true
 ---
 

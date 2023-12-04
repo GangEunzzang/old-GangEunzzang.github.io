@@ -1,12 +1,10 @@
 ---
-title: '[Effective Java] Day 31 - Item 72 :: 표준 예외를 사용하라'
+title: 'Item 72 :: 표준 예외를 사용하라'
 layout: post
 categories: java
-tags: java
+tags: Effective-Java
 comments: true
 ---
-
-Item 72 :: 표준 예외를 사용하라
 
 ## Exception의 재사용
 - 자바 라이브러리는 대부분 API에서 쓰기 충분한 Exception들을 제공하므로, 재사용하는 것이 좋음

@@ -1,12 +1,12 @@
 ---
-title: '[Effective Java] Day 25 - Item 27, 28 :: 비검사 경고를 제외하라, 배열보다는 리스트를 사용하라'
+title: 'Item 27, 28 :: 비검사 경고를 제외하라, 배열보다는 리스트를 사용하라'
 layout: post
 categories: java
-tags: java 이펙티브자바 effectiveJava
+tags: Effective-Java
 comments: true
 ---
 
-Day25에서는 item 27,28에 대한 내용을 다룬다.
+
 
 ## Item 27 :: 비검사 경고를 제외하라
 제너릭을 활용하면 아래와 같은 컴파일러의 비검사 경고를 볼 수 있다.  

@@ -1,12 +1,10 @@
 ---
-title: '[Effective Java] Day 23 - Item 25, Item 26 :: 톱레벨 클래스는 한 파일에 하나만 담으라, 로 타입은 사용하지 말라'
+title: 'Item 25, Item 26 :: 톱레벨 클래스는 한 파일에 하나만 담으라, 로 타입은 사용하지 말라'
 layout: post
 categories: java
-tags: java 이펙티브자바 effectiveJava
+tags: Effective-Java
 comments: true
 ---
-
-Day23에서는 item 25, 26에 대한 내용을 다룬다.
 
 ## Item 25 :: 톱레벨 클래스는 한 파일에 하나만 담으라
 >A top level class is a class that is not a nested class.

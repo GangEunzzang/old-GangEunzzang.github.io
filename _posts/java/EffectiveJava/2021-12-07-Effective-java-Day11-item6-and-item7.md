@@ -1,12 +1,10 @@
 ---
-title: '[Effective Java] Day 11 - Item 6, 7 :: 불필요한 객체 생성을 피하라 (2), 다 쓴 객체 참조를 해제하라'
+title: '[Effective Java] Item 6, 7 :: 불필요한 객체 생성을 피하라 (2), 다 쓴 객체 참조를 해제하라'
 layout: post
 categories: java
-tags: java
+tags: Effective-Java
 comments: true
 ---
-
-Day 11 기록 시작!
 
 ## Item 6 :: 불필요한 객체 생성을 피하라 (2)
 ### static 팩터리 메서드 사용하기

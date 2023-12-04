@@ -1,12 +1,10 @@
 ---
-title: '[Effective Java] Day 21 - Item 20 :: 추상 클래스보다는 인터페이스를 우선하라'
+title: 'Day 21 - Item 20 :: 추상 클래스보다는 인터페이스를 우선하라'
 layout: post
 categories: java
-tags: java 이펙티브자바 effectiveJava
+tags: Effective-Java
 comments: true
 ---
-
-Day21에서는 item 20에 대한 내용을 다룬다.
 
 ## Item 20 :: 추상 클래스보다는 인터페이스를 우선하라
 

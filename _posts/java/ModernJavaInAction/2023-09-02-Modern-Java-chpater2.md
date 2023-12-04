@@ -1,9 +1,10 @@
 ---
-title: '[모던 자바 인 액션] chapter2 동적 파라미터화 코드 전달하기'
+title: 'chapter2 :: 동적 파라미터화 코드 전달하기'
 layout: post
 categories: java
-tags: java
+tags: Modern-Java-In-Action
 comments: true
+future: true
 ---
 
 유저가 어떤 상황에서 일을 하든 소비자 요구사항은 항상 바뀐다.  

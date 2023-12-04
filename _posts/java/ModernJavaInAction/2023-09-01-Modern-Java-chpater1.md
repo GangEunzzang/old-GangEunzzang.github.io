@@ -1,8 +1,8 @@
 ---
-title: '[모던 자바 인 액션] chapter1 자바 8,9,10,11 무슨 일이 일어나고 있는가?'
+title: 'chapter1 :: 자바 8,9,10,11 무슨 일이 일어나고 있는가?'
 layout: post
 categories: java
-tags: java
+tags: Modern-Java-In-Action
 comments: true
 ---
 

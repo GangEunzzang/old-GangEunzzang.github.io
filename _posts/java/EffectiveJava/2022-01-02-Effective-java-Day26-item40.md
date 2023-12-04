@@ -1,12 +1,10 @@
 ---
-title: '[Effective Java] Day 26 - Item 40 :: @Override 애너테이션을 일관되게 사용하라'
+title: 'Item 40 :: @Override 애너테이션을 일관되게 사용하라'
 layout: post
 categories: java
-tags: java 이펙티브자바 effectiveJava
+tags: Effective-Java
 comments: true
 ---
-
-Day26에서는 item 40에 대한 내용을 다룬다.
 
 ## Item 40 :: @Override 애너테이션을 일관되게 사용하라
 ### 1. 재정의하려는 모든 메서드에 @Override 애너테이션을 사용하자

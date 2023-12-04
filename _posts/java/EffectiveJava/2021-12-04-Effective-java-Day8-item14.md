@@ -1,8 +1,8 @@
 ---
-title: '[Effective Java] Day 8 - Item 14 :: Comparable을 구현할지 고려하라'
+title: 'Item 14 :: Comparable을 구현할지 고려하라'
 layout: post
 categories: java
-tags: java
+tags: Effective-Java
 comments: true
 ---
 

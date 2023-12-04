@@ -1,12 +1,10 @@
 ---
-title: '[Effective Java] Day 10 - Item 5 :: 자원을 직접 명시하지 말고 의존 객체 주입을 사용하라 (2)'
+title: 'Item 5 :: 자원을 직접 명시하지 말고 의존 객체 주입을 사용하라 (2)'
 layout: post
 categories: java
-tags: java
+tags: Effective-Java
 comments: true
 ---
-
-Day 10 기록 시작!
 
 ## Item 5 :: 자원을 직접 명시하지 말고 의존 객체 주입을 사용하라 (2)
 많은 클래스는 하나 이상의 자원에 의존한다. 이 책에서는 맞춤법 검사기인 `SpellChecker`와 `dictionary`를 예로 들고있다. 즉, `SpellChecker`가 `dictionary`를 사용하고, 이를 의존 하는 리소스 또는 의존성이라고 부른다.  

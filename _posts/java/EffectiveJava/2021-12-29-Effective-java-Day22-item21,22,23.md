@@ -1,12 +1,11 @@
 ---
-title: '[Effective Java] Day 22 - Item 21, 22, 23 :: 인터페이스는 구현하는 쪽을 생각해 설계하라, 인터페이스는 타입을 정의하는 용도로만 사용하라, 태그 달린 클래스보다는 클래스 계층구조를 활용하라'
+title: 'Day 22 - Item 21, 22, 23 :: 인터페이스는 구현하는 쪽을 생각해 설계하라, 인터페이스는 타입을 정의하는 용도로만 사용하라, 태그 달린 클래스보다는 클래스 계층구조를 활용하라'
 layout: post
 categories: java
-tags: java 이펙티브자바 effectiveJava
+tags: Effective-Java
 comments: true
 ---
 
-Day22에서는 item 21, 22, 23에 대한 내용을 다룬다.
 
 ## Item 21 :: 인터페이스는 구현하는 쪽을 생각해 설계하라
 인터페이스에서 새로운 메소드를 추가하면 기존의 구현체들에 영향이 가게 된다.

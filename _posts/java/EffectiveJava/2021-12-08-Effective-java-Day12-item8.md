@@ -1,12 +1,11 @@
 ---
-title: '[Effective Java] Day 12 - Item 8 :: finalizer와 cleaner 사용을 피하라'
+title: '[Effective Java] Item 8 :: finalizer와 cleaner 사용을 피하라'
 layout: post
 categories: java
-tags: java
+tags: Effective-Java
 comments: true
 ---
 
-Day 12 기록 시작!
 * * *
 **finalizer는 예측할 수 없고, 상황에 따라 위험할 수 있어 일반적으로 불필요하다.** 오동작, 낮은 성능, 이식성 문제의 원인이 되기도 한다. Finalizer를 유용하게 쓸 수 있는 경우는 극히 드물다.  
 

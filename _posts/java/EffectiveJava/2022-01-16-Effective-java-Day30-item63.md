@@ -1,12 +1,10 @@
 ---
-title: '[Effective Java] Day 30 - Item 63 :: 문자열 연결은 느리니 주의하라'
+title: 'Item 63 :: 문자열 연결은 느리니 주의하라'
 layout: post
 categories: java
-tags: java 이펙티브자바 effectiveJava
+tags: Effective-Java
 comments: true
 ---
-
-Day30에서는 item 63에 대한 내용을 다룬다.
 
 ## Item 63 :: 문자열 연결은 느리니 주의하라
 ### 1. 문자열 연결 연산자(+)

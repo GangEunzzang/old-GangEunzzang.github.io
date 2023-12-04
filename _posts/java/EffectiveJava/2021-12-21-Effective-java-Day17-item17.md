@@ -1,8 +1,8 @@
 ---
-title: '[Effective Java] Day 17 - Item 17 :: 변경가능성을 최소화 하라(2)'
+title: 'Item 17 :: 변경가능성을 최소화 하라(2)'
 layout: post
 categories: java
-tags: java 이펙티브자바 effectiveJava
+tags: Effective-Java
 comments: true
 ---
 

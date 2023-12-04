@@ -1,12 +1,10 @@
 ---
-title: '[Effective Java] Day 9 - Item 3, 4, 5 :: Private 생성자나 열거 타입으로 싱글턴임을 보증하라(3), 인스턴스화를 막으려거든 private 생성자를 사용하라, 자원을 직접 명시하지 말고 의존 객체 주입을 사용하라'
+title: 'Item 3, 4, 5 :: Private 생성자나 열거 타입으로 싱글턴임을 보증하라(3), 인스턴스화를 막으려거든 private 생성자를 사용하라, 자원을 직접 명시하지 말고 의존 객체 주입을 사용하라'
 layout: post
 categories: java
-tags: java
+tags: Effective-Java
 comments: true
 ---
-
-Day 8에서는 Comparable 구현에 대해서 공부했다. 이번 Day 9에서는 item 3를 알아본 Day 7에 이어서 뒷부분인 직렬화에 대해 알아보겠다. Day 9 기록 시작!
 
 ## Item 3 :: Private 생성자나 열거 타입으로 싱글턴임을 보증하라 (3)
 ### 직렬화 (Serialization)
