@@ -2,9 +2,11 @@
 title: '디자인 패턴 정리'
 layout: post
 categories: java
-tags: 디자인 패턴
+tags: 기타
 comments: true
 ---
+
+디자인 패턴은 무수히 많다 그 중 대표적인 GoF 디자인 패턴에 대해 알아보자
 
 ## 싱글톤 패턴 (SingleTon Pattern)
 * 객체를 하나만 만들어 사용하는 패턴
