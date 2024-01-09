@@ -3,7 +3,7 @@ title: ' Item 1 :: 생성자 대신 정적 팩터리 메서드를 고려하라'
 layout: post
 categories: java
 tags: Effective-Java
-comments: true
+comments: false
 ---
 
 ### 정적 팩터리 메서드의 장점
