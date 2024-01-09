@@ -93,6 +93,127 @@ public class Foo {
 ```
 반복되는 요청에 같은 객체를 반환하는 식으로 정적 팩터리 방식의 클래스는 언제 어느 인스턴스를 살아있게 할지를 철저히 통제할 수 있다. 이를 **인스턴트 통제 클래스**라 한다. 즉, 값이 있으면 새로 만들지 않고 기존 객체를 재사용하는 클래스를 말한다.  
 
+
+#### 3. 반환 타입의 하위 객체를 반환할 수 있는 능력이 있다.
+반환할 객체의 클래스를 자유롭게 선택할 수 있게하는 유연성이 있다. 이는 인터페이스를 정적 팩터리 메서드의 반환타입으로 사용하는 `인터페이스 기반 프레임워크`의 핵심 기술이다.  
+
+1. **자바 8 이전**  
+인터페이스에 정적 메서드를 선언할 수 없었다. 그래서 A라는 인터페이스가 있고 그 안에 이름이 "Type"인 A 인터페이스를 반환하는 정적 메서드가 필요하다면, "Types"라는 인스턴스화 불가 동반 클래스를 만들어 그 안에 A객체를 반환하는 Type이라는 이름의 정적 메소드를 정의하는 것이 관례였다.  
+2. **자바 8 이후**  
+인터페이스도 정적 팩터리 메서드를 가질 수 있다.
+    - 인스턴스화 불가 동반 클래스를 쓰지 않고, 동반 클래스 내 public 정적 멤버를 인터페이스 자체에 둘 수 있게됨.
+    - But, 자바 8에서도 인터페이스에는 public 정적 멤버만 허용함. 그러므로 정적 메서드를 구현하기 위한 코드 중 많은 부분은 여전히 별도의 `package-private` 클래스에 두어야 가능  
+
+```java
+package item1;
+
+public interface FooInterface {
+   
+    //자바 8부터는 인터페이스에도 정적 팩터리 메서드 추가 가능. private static은 자바 9부터 가능
+    public static Foo getFoo() {
+        return new Foo();
+    }
+}
+```  
+그럼 private Static은 어떨 때 사용하는가?  
+보통 아래처럼 두개의 메소드(doSomething과 doSomethingTomorrow)에서 공통으로 겹치는 소스가 있는 경우 private 메소드를 생성하여 공통부분을 묶어 메소드 하나로 만든다. 예제 소스에서는 `Effecttive를공부하고잔다` 부분이다.  
+이때 public static 메소드에서 `Effecttive를공부하고잔다`를 호출할려는 경우 static 타입이 아니면 호출이 불가능하다. 왜냐? static 메서드에서는 static만 호출 및 사용이 가능하기 때문이다. 따라서 private static이 필요한 이유는 public static이 필요한 이유와 같다.
+
+```java
+public class WhyNeedPrivateStatic {
+    public static void doSomething() {//static 메서드에서는 static만 호출 및 사용이 가능하다.
+        //Todo 근무를 한다
+        //Todo 네이버 블로그 천지양꼬치를 포스팅한다
+        //Todo 설거지를 한다
+        Effecttive를공부하고잔다();
+    }
+   
+    public void doSomethingTomorrow() {
+        //강남역 토즈에가서 스터디에간다
+        Effecttive를공부하고잔다();
+    }
+   
+    private static void Effecttive를공부하고잔다(){//그러므로 private static이 필요한 이유는 pulbic static이 필요한 이유와 같음
+        //Todo Effective Java Item 1을 공부한다
+        //Todo 잔다
+    }
+}
+```
+
+3. **자바9**  
+    private 정적 메서드까지 허용. 하지만 정적 필드와 정적 멤버 클래스는 여전히 private이어야 함
+
+    자바 컬렉션 프레임 워크는 핵심 인터페이스들에 수정 불가나 동기화 등의 기능을 덧붙인 총 45개의 유틸리티 구현체를 제공한다. 이 구현체의 대부분을 **단 햐냐의 인스턴스화 불가 클래스인 `java.util.Collections`에서 정적 팩터리 메서드를 통해 얻도록** 했다.  
+    프로그래머는 명시한 인터페이스대로 동작하는 객체를 얻을 것임을 알기에 굳이 별도 문서를 찾아가며 실제 구현 클래스가 무엇인지 알아보지 않아도 되며, 정적 팩터리 메서드를 사용하는 클라이언트는 얻은 객체를 인터페이스 만으로 다루게 된다. 이는 일반적으로 좋은 솝관이다.
+
+#### 4. 입력 매개변수에 따라 매번 다른 클래스의 객체를 반환할 수 있다.
+반환 타입의 하위 타입이기만 하면 어떤 클래스의 객체를 반환하든 상관없다. 심지어 다음 릴리즈 에서는 또 다른 클래스의 객체 반환이 가능하다.  
+
+예를 들어 아래 소스코드처럼 Foo 객체라고해서 Foo를 무조건 리턴하지 않고 flag에 따라 다른 객체를 반환하도록 할 수 있다. true인 경우 Foo 객체를 반환하고 fale인 경우 Foo의 하위 클래스인 Barfoo 객체를 반환한다.  
+
+```java
+package temp;
+
+import java.util.EnumSet;
+
+public class Foo {
+    String name;
+    String address;
+   
+    public static Foo getFoo(boolean flag) {
+        return flag ? new Foo(): new Barfoo();
+    }
+   
+    public static void main(String[] args){
+        //장점 4: Foo객체라고해서 Foo를 무조건 리턴할 필요는 없다. flag에 따라 객체를 반환하게됨.
+        Foo foo3 = Foo.getFoo(false);
+        EnumSet<Color> colors = EnumSet.allOf(Color.class);
+        EnumSet<Color> colors2 = EnumSet.of(Color.BLUE, Color.WHITE);//실제 인스턴스는 enum의 갯수에 따라 달라진다. 몇 개 이하이면 ReugularEnumSet으로 나오고, 그 이상이면 JumboEnumSet으로 리턴하는 객체가 달라진다.
+    }
+   
+    static class Barfoo extends Foo{
+    }
+   
+    enum Color {
+        RED, BLUE, WHITE
+    }
+}
+```
+실제로 EnumSet 클래스 선언 시 실제 인스턴스는 enum 원소의 갯수에 따라 달라진다. enum 원소가 64개 이하이면 ReugularEnumSet으로 나오고, 그 이상이면 JumboEnumSet 인스턴스가 반환된다. 하지만 클라이언트는 팩터리가 건네주는 객체가 어느 클래스의 인스턴스인지 알 수도 없고 알 필요도 없다.
+
+#### 5. 정적 팩터리 메서드를 작성하는 시점에는 반환할 객체의 클래스가 존재하지 않아도 된다.
+대표적인 서비스 제공자 프레임워크인 JDBC(Java Database Connectivity)를 만드는 근간은 이런 유연함이다.  
+
+![JDBC](/assets\img/JDBC.gif)
+즉, `서비스 접근 API인 DriverManager.getConnection`를 작성하는 시점에는 `반환할 서비스 인터페이스인 Connection`의 하위 클래스가 아직 존재하지 않아도 동작이 가능하다
+1. **제공자(Provider)**: 서비스의 구현체
+2. **프레임워크**: 구현체를 클라이언트에 제공하는 역할 통제. 클라이언트와 구현체 분리.  
+    **3개의 핵심 컴포넌트**  
+    1) 서비스 인터페이스 ex) Connection  
+    2) 제공자 등록 API ex) DriverManager.registerDriver  
+    3) 서비스 접근 API ex) DriverManager.getConnection  
+        : 공급자가 제공하는 것보다 더 풍부한 서비스 인터페이스를 클라이언트에 반환 가능 → **브리지 패턴**
+
+    **종종 사용되는 컴포넌트**  
+    4) 서비스 제공자 인터페이스 ex) Driver  
+        : 서비스 인터페이스의 인스턴스를 생성하는 팩터리 객체를 설명해줌  
+          서비스 제공자 인터페이스가 없다면 각 구현체를 인스턴스로 만들 때 **리플렉션**을 사용해야 함
+3. **Client**
+
+자바 6부터는 `java.util.ServiceLoader`라는 범용 서비스 제공자 프레임워크를 제공하지만, JDBC가 그 보다 이전에 만들어졌기 때문에 JDBC는 ServiceLoader를 사용하진 않는다.
+
+### 정적 팩터리 메서드의 단점
+#### 1. 상속을 하려면 public이나 protected 생성자가 필요하니 정적 팩터리 메서드만 제공하면 하위 클래스를 만들 수 없다.  
+컬렉션 프레임워크의 유틸리티 구현 클래스들은 **상속할 수 없다**. 하지만 상속보다 컴포지션을 사용하도록 유도하고 불변 타입으로 만들려면 이 제약을 지켜야하기때문에 오히려 장점이 될 수 있다.
+
+#### 2. 정적 팩터리 메서드는 프로그래머가 찾기 어렵다.
+생성자는 Javadoc 상단에 모아서 보여주지만 static 팩토리 메소드는 API 문서에서 특별히 다뤄주지 않는다. 따라서 클래스나 인터페이스 문서 상단에 static 팩토리 메소드 방식 클래스를 인스턴스화 하는 방법 등의 내용을 담아 주석으로 표시하여 제공하는 것이 좋겠다.
+
+### 결론
+정적 팩터리 메서드와 pulbic 생성자는 각자의 쓰임새가 있으니 무조건 정적 팩터리 메서드가 옳다고 할 순 없다. 각자의 상대적인 장단점이 있을 뿐! 그럼에도 불구하고 대게 정적 팩터리를 사용하는 것이 유리한 경우가 더 많으므로 무조건 pulbic 생성자만을 제공하던 습관이 있다면 고치는게 좋다 :)
+
+
+
 **인스턴트 클래스를 통제하는 이유**  
 1. **싱글턴(Singleton)**으로 만들 수 있다.
     - **싱글턴**: 객체의 인스턴스가 오직 1개만 생성되는 패턴을 의미  
