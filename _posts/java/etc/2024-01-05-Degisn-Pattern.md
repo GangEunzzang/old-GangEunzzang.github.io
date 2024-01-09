@@ -1,7 +1,7 @@
 ---
-title: '[Java] 디자인 패턴 정리'
+title: '디자인 패턴 정리'
 layout: post
-categories: 디자인 패턴
+categories: java
 tags: 디자인 패턴
 comments: true
 ---
